@@ -17,7 +17,7 @@ namespace Task2Tests
         {
             TestClassSumUp obj = new TestClassSumUp();
             int[][] array = new int[][] { new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, new[] { 0, 5, 6, 7, 0, 4 } };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] { new[] { 2, 3, 4 },new[] { 1, 2, 3, 4 }, new[] { 0, 5, 6, 7, 0, 4 }, new[] { 4, 5, 6, 7, 432, 4 }, new[]  { 5, 5, 55555 }},array);
 
         }
@@ -26,7 +26,7 @@ namespace Task2Tests
         {
             TestClassSumDown obj = new TestClassSumDown();
             int[][] array = new int[][] { new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, new[] { 0, 5, 6, 7, 0, 4 } };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] {   new[] { 5, 5, 55555 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 0, 5, 6, 7, 0, 4 }, new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }},array);
 
         }
@@ -35,7 +35,7 @@ namespace Task2Tests
         {
             TestClassSumDown obj = new TestClassSumDown();
             int[][] array = new int[][] { new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, null, new[] { 5, 5, 55555 }, new[] { 0, 5, 6, 7, 0, 4 } ,null};
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] { new[] { 5, 5, 55555 },  new[] { 0, 5, 6, 7, 0, 4 }, new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, null, null }, array);
 
         }
@@ -44,7 +44,7 @@ namespace Task2Tests
         {
             TestClassSumUp obj = new TestClassSumUp();
             int[][] array = new int[][] { null,new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 },null,null, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 },null,null, new[] { 0, 5, 6, 7, 0, 4 } };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] { new[] { 2, 3, 4 }, new[] { 1, 2, 3, 4 }, new[] { 0, 5, 6, 7, 0, 4 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, null, null, null, null, null }, array);
 
         }
@@ -53,7 +53,7 @@ namespace Task2Tests
         {
             TestClassMaxElemUp obj = new TestClassMaxElemUp();
             int[][] array = new int[][] { null, new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, null, null, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, null, null, new[] { 0, 5, 6, 7, 0, 4 } };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] {  new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, new[] { 0, 5, 6, 7, 0, 4 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, null, null, null, null, null }, array);
 
         }
@@ -62,7 +62,7 @@ namespace Task2Tests
         {
             TestClassMaxElemDown obj = new TestClassMaxElemDown();
             int[][] array = new int[][] { null, new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 }, null, null, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, null, null, new[] { 0, 5, 6, 7, 0, 4 } };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] {  new[] { 5, 5, 55555 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 0, 5, 6, 7, 0, 4 }, new[] { 1, 2, 3, 4 }, new[] { 2, 3, 4 } , null, null, null, null, null}, array);
 
         }
@@ -71,7 +71,7 @@ namespace Task2Tests
         {
             TestClassMinElemDown obj = new TestClassMinElemDown();
             int[][] array = new int[][] { null, new[] { -1001, 2, 3, 4 }, new[] { 2, 3, -4 }, null, null, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, null, null };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] {new[] { -1001, 2, 3, 4 }, new[] { 2, 3, -4 }, new[] { 4, 5, 6, 7, 432, 4 }, new[] { 5, 5, 55555 }, null, null, null, null, null}, array);
 
         }
@@ -80,7 +80,7 @@ namespace Task2Tests
         {
             TestClassMinElemUp obj = new TestClassMinElemUp();
             int[][] array = new int[][] { null, new[] { 100,-3 }, new[] { 2, -1000, 4 }, null };
-            MatrixFuncInterface.BubbleSort(obj, array);
+            MatrixFuncInterface.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] {  new[] { 100, -3 }, new[] { 2, -1000, 4 }, null, null }, array);
 
         }
@@ -90,9 +90,9 @@ namespace Task2Tests
         [Test]
         public void Test9()
         {
-            ComparerDelegate compDelegate = (new TestClassMaxElemDown()).Compare;
+            Comparison<int[]> compDelegate = (new TestClassMaxElemDown()).Compare;
             int[][] array = new int[][] { null, new[] { 100, -3 }, new[] { 2, -1000, 4 }, null };
-            MatrixFuncInterface.BubbleSort(compDelegate, array);
+            MatrixFuncInterface.BubbleSort(array, compDelegate);
             Assert.AreEqual(new int[][] { new[] { 100, -3 }, new[] { 2, -1000, 4 },null, null }, array);
 
         }
@@ -101,16 +101,16 @@ namespace Task2Tests
         {
             TestClassMaxElemDown obj = new TestClassMaxElemDown();
             int[][] array = new int[][] { null, new[] { 100, -3 }, new[] { 2, -1000, 4 }, null };
-            MatrixFuncDelegate.BubbleSort(obj, array);
+            MatrixFuncDelegate.BubbleSort(array, obj);
             Assert.AreEqual(new int[][] { new[] { 100, -3 }, new[] { 2, -1000, 4 }, null, null }, array);
 
         }
         [Test]
         public void Test11()
         {
-            ComparerDelegate compDelegate = (new TestClassMaxElemDown()).Compare;
+            Comparison<int[]> compDelegate = (new TestClassMaxElemDown()).Compare;
             int[][] array = new int[][] { null, new[] { 100, -3 }, new[] { 2, -1000, 4 }, null };
-            MatrixFuncDelegate.BubbleSort(compDelegate, array);
+            MatrixFuncDelegate.BubbleSort(array, compDelegate);
             Assert.AreEqual(new int[][] { new[] { 100, -3 }, new[] { 2, -1000, 4 }, null, null }, array);
 
         }

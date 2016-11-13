@@ -10,23 +10,20 @@ namespace Task2
     {
         /// <summary>
         /// "Bubble" sorting of matrix strings with rule getting from first ICompare-type param
-        /// If matrix strings is null it get first places
+        /// If matrix strings is null it get last places
         /// </summary>
         /// <param name="rule">The type of object must implement ICompare interface</param>
         /// <param name="matrix"></param>
-        public static void BubbleSort(IComparer<int[]> rule, int[][] matrix)
-        {
-           BubbleSort((ComparerDelegate)rule.Compare,matrix);
-        }
+        public static void BubbleSort(int[][] matrix, IComparer<int[]> rule)=> BubbleSort(matrix, rule.Compare);
 
         /// <summary>
-        /// "Bubble" sorting of matrix strings with rule getting from first ICompare-type param
-        /// If matrix strings is null it get first places
+        /// "Bubble" sorting of matrix strings with rule getting from first delegate param
+        /// If matrix strings is null it get last places
         /// </summary>
-        /// <param name="rule">The type of object must implement ICompare interface</param>
+        /// <param name="rule">The type of object must be delegate of comparing </param>
         /// <param name="matrix"></param>
 
-        public static void BubbleSort(ComparerDelegate rule, int[][] matrix)
+        public static void BubbleSort(int[][] matrix, Comparison<int[]> rule)
         {
             if (matrix == null || rule == null)
                 throw new ArgumentNullException();
